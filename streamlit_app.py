@@ -9,7 +9,7 @@ from langchain.chains import LLMChain, SequentialChain
 from langchain.memory import ConversationBufferMemory
 from langchain.utilities import WikipediaAPIWrapper
 
-OPENAI_API_KEY = st.secrets["apikey"]
+os.environ['OPENAI_API_KEY'] = st.secrets["apikey"]
 
 # App UI framework
 st.title('🦜🔗 Tweet Generator')
